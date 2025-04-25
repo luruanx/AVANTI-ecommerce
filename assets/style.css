@@ -1188,6 +1188,9 @@ footer {
     .footer-menu-subs {
         margin-right: 10px;
     }
+    .search-popup {
+        left: -15px;
+    }
 }
 @media (max-width: 700px) {
     .mobile-toggle {
@@ -1346,6 +1349,9 @@ footer {
     .footer-up-pay .pay-1 {
         margin: 40px 0 -20px ;
     }
+    .search-popup {
+        left: -15px;
+    }
 }
 
 /* Mobile */
@@ -1371,6 +1377,10 @@ footer {
     .header-input a img {
         right: 2rem;
     }
+    .search-popup {
+        left: 17px;
+        width: 90%;
+    }
 
     .section-banner {
         margin-top: 145px;
@@ -1386,7 +1396,7 @@ footer {
         margin-right: 10px;
     }
     .sec-banner-text h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     .sec-banner-text h3 {
         font-size: .66rem;
@@ -1419,6 +1429,7 @@ footer {
     }
     .carousel-img img {
         height: 140px;
+        width: 100%;
     }
     .carousel-description h3 {
         font-size: .7rem;
