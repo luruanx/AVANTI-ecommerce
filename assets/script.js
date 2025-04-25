@@ -171,7 +171,7 @@ function criarDepartamentoMobile(nome, index) {
 
   const arrow = document.createElement("span");
   arrow.classList.add("arrow");
-  arrow.innerHTML = "▶";
+  arrow.innerHTML = "˃";
 
   dep.appendChild(span);
   dep.appendChild(arrow);
