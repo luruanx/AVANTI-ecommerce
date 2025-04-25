@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanti</title>
+
+    <!-------------------- Favicon -->
+    <link rel="shortcut icon" href="assets/img/icon/favicon.png" type="image/x-icon">
+    <!-------------------- CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-------------------- JavaScript -->
+    <script src="assets/script.js" defer></script>
+    <!-------------------- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-------------------- Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-------------------- AOS Animation ------------------>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- FIXED HEADER -->
+    <header>
+        <div class="coupon">
+            <p>Ganhe <span>R$10,00</span> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO10</i></p>
+        </div>
+
+        <div class="header-main">
+            <div class="header-logo">
+                
+                <!-- menu-mobile -->
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- blur -->
+                <div class="mobile-overlay" id="mobileOverlay"></div>
+                <!-- menu mobile content -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <div class="mobile-close" id="mobileClose">✖</div>
+                    <div class="mobile-deps" id="mobileDeps"></div>
+                </div>
+
+                <!-- desktop header -->
+                <a href="#" class="main-logo"><img src="assets/img/LogoAvanti.png" alt="logo Avanti"></a>
+                
+                <div class="header-input" id="searchWrapper">
+                    <input type="search" id="searchInput" name="search" placeholder="Digite aqui o que você procura" />
+                    
+                    <a id="searchBtn"><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" /></a>
+                
+                    <div class="search-popup" id="searchPopup" style="display: none;"></div>
+                </div>
+
+                <div class="header-cart">
+                    <div class="user-login">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Olá, <br>Nome cliente!</p>
+                    </div>
+                    <div class="cart-icon">
+                        <img src="assets/img/icon/cart.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <nav>
+                <menu>
+                    <!-- nav-menu1 -->
+                    <menuitem>
+                        <a class="menu-option1">
+                            <i class="fa-solid fa-bars"></i>
+                            Todas as Categorias
+                        </a>
+
+                        <menu class="nav-menu1">
+                            <div class="menu-content">
+                                <div class="menu-container-dep">
+                                    <div class="departamentos">
+                                        <div data-dept="0" class="name-dep">
+                                            Departamento1
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="1" class="name-dep">
+                                            Departamento2
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="2" class="name-dep">
+                                            Departamento3
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="3" class="name-dep">
+                                            Departamento4
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="4" class="name-dep">
+                                            Departamento5
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="5" class="name-dep">
+                                            Departamento6
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="6" class="name-dep">
+                                            Departamento7
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="7" class="name-dep">
+                                            Departamento8
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="8" class="name-dep">
+                                            Departamento9
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="9" class="name-dep">
+                                            Departamento10
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+
+                                        <div data-dept="10" class="name-dep">
+                                            Departamento11
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+            
+                                    </div>    
+                                
+                                    <div class="categorias-box" id="categoriasBox">
+                                        <div class="categorias-row" id="categoriasContent">
+                                            <!-- Categories here -->
+                                        </div>
+
+                                        <div class="cat-banner-lateral" id="catBannerLateral">
+                                            <div class="cat-banner-content">
+                                                <p>Confira os Produtos <span>Que acabaram De chegar</span></p>
+                                                <a href="#">VER TODOS</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </menu>
+                    </menuitem>
+
+                    <div class="menuitem-dep-full">
+                        <menuitem class="menuitem-dep" data-dept="0"><a>Departamento1</a></menuitem>
+                        <menuitem class="menuitem-dep" data-dept="1"><a>Departamento2</a></menuitem>
+                        <menuitem class="menuitem-dep" data-dept="2"><a>Departamento3</a></menuitem>
+                        <menuitem class="menuitem-dep" data-dept="3"><a>Departamento4</a></menuitem>
+                        <menuitem class="menuitem-dep" data-dept="4"><a>Departamento5</a></menuitem>
+                        <menuitem class="menuitem-dep" data-dept="5"><a>Departamento6</a></menuitem>
+                        <menuitem class="menuitem-dep" data-dept="6"><a>Departamento7</a></menuitem>
+                        <menuitem class="menuitem-dep" data-dept="7"><a>Departamento8</a></menuitem>
+                    </div>
+                </menu>
+
+                <!-- category block that will be used in menuitem-dep -->
+                <div class="cat-box2">
+                    <div class="categorias-box menuitem-box" id="menuitemCategoriasBox">
+                        <div>
+                            <div class="menuitem-title" id="menuitemTitle"></div>
+                            <div class="categorias-row" id="menuitemCategoriasContent">
+                                <!-- Categores here -->
+                            </div>
+                        </div>
+                        <div class="cat-banner-lateral" id="menuitemBannerLateral">
+                            <div class="cat-banner-content">
+                                <p>Confira os Produtos <span>Que acabaram De chegar</span></p>
+                                <a href="#">VER TODOS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER SECTION -->
+    <section class="section-banner">
+        <div class="sec-banner-content container">
+            <div class="sec-banner-img">
+                <img src="assets/img/chair.png" alt="">
+            </div>
+
+            <div class="sec-banner-text">
+                <h1><span>Super</span>sale</h1>
+                <h3>itens selecionados com até</h3>
+                <h2>50%OFF</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAROUSEL SECTION -->
+    <section class="section-carousel">
+        <div class="sec-carousel-content container" data-aos="zoom-in-up">
+            <div class="carousel-tittle">
+                <h2>Lançamentos</h2>
+                <button type="button">Ver mais</button>
+            </div>
+
+            <div class="carousel-content">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- MAIN -->
+    <main>
+        <!-- MAIN SECTION ONE -->
+        <section class="section-main-one">
+            <div class="sec-one-content container" data-aos="zoom-in-up">
+                <div class="one-banner">
+                    <img src="assets/img/cup-one.png" alt="">
+                </div>
+
+                <div class="one-text">
+                    <h2>Lorem Ipsum</h2>
+                    <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+
+                    <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN SECTION TWO -->
+        <section class="section-main-two">
+            <div class="sec-two-content container" data-aos="zoom-in-up">
+
+                <div class="two-text">
+                    <h2>Lorem Ipsum</h2>
+                    
+                    <div class="two-text-icon">
+                        <div>
+                            <img src="assets/img/icon/map.png" alt="">
+                        </div>
+
+                        <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    </div>
+
+                    <div class="two-text-icon">
+                        <div>
+                            <img src="assets/img/icon/map.png" alt="">
+                        </div>
+                        
+                        <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    </div>
+
+                    <div class="two-text-icon">
+                        <div>
+                            <img src="assets/img/icon/map.png" alt="">
+                        </div>
+                        
+                        <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    </div>
+                </div>
+
+                <div class="two-banner">
+                     <img src="assets/img/cup-two.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN SECTION ONE -->
+        <section class="section-main-one">
+            <div class="sec-one-content container" data-aos="zoom-in-up">
+                <div class="one-banner">
+                    <img src="assets/img/cup-one.png" alt="">
+                </div>
+
+                <div class="one-text">
+                    <h2>Lorem Ipsum</h2>
+                    <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+
+                    <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CAROUSEL SECTION -->
+    <section class="section-carousel">
+        <div class="sec-carousel-content container" data-aos="zoom-in-up">
+            <div class="carousel-tittle">
+                <h2>Lançamentos</h2>
+                <button type="button">Ver mais</button>
+            </div>
+
+            <div class="carousel-content">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+
+                        <!-- Slide block start -->
+                        <div class="swiper-slide">
+                            <!-- Product-block -->
+                            <div class="carousel-block">
+                                <div class="block-h">
+                                    <div class="highlight">NOVO</div>
+                                </div>
+                                
+                                <div class="carousel-img">
+                                    <a href="#"><img src="assets/img/product.png" alt="jovem com blusa branca"></a>
+                                </div>
+            
+                                <div class="carousel-description">
+                                    <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+            
+                                    <div>
+                                        <div class="real-price">
+                                            <div>
+                                                <p>R$ 100,00</p>
+                                                <span>R$79,90</span>
+                                            </div>
+            
+                                            <div class="discount">
+                                                10% OFF
+                                            </div>
+                                        </div>
+            
+                                        <p class="card-price">Ou em até <span>10x de R$ 7,90</span></p>
+                                    </div>
+                                </div>
+            
+                                <button type="button">Comprar</button>
+                            </div>
+                        </div> <!-- Slide block end -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="call-to-action">
+        <h3>Entre em contato conosco e verifique a disponibilidade para sua região!</h3>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="sec-newsletter-content container">
+            <p>Cadastre-se na nossa <span>newsletter</span></p>
+
+            <div class="newsletter-block">
+                <input type="text" placeholder="Digite seu nome" class="input-news">
+
+                <input type="email" placeholder="Digite seu e-mail" class="input-news">
+                
+                <label class="check-news">
+                    <input type="checkbox" required>
+                    <span>Estou de acordo com a <a href="#">Política de Privacidade</a></span>
+                </label>
+            
+                <button type="submit" class="btn-news">Cadastrar</button>
+            </div>
+        </div>
+    </section>
+     
+    <footer>
+        <!-- footer-up -->
+        <div class="footer-content">
+            <div class="footer-up container">
+                <div class="footer-up-menus">
+                    <div class="footer-m-logo">
+                        <img src="assets/img/LogoAvanti.png" alt="">
+    
+                        <div class="footer-social">
+                            <a href="#"><img src="assets/img/icon/instagram.png" alt="instagram"></a>
+                            <a href=""><img src="assets/img/icon/facebook.png" alt="facebook"></a>
+                            <a href=""><img src="assets/img/icon/youtube.png" alt="youtube"></a>
+                            <a href=""><img src="assets/img/icon/tiktok.png" alt="tiktok"></a>
+                        </div>
+                    </div>
+    
+                    <div class="footer-menu-subs">
+                        <h4 class="footer-sub-toggle">
+                            Institucional 
+                            <i class="fa-solid fa-chevron-down seta"></i>
+                        </h4>
+                
+                        <div class="footer-sub-itens">
+                            <a href="https://github.com/luruanx">
+                                <h5>Sobre nós</h5>
+                            </a>
+                            <a href="#">
+                                <h5>Nossas Lojas</h5>
+                            </a>
+                            <a href="#">
+                                <h5>Privacidade e Segurança</h5>
+                            </a>
+                            <a href="#">
+                                <h5>Termos e Condições</h5>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu-subs">
+                        <h4 class="footer-sub-toggle">
+                            Central de Ajuda 
+                            <i class="fa-solid fa-chevron-down seta"></i>
+                        </h4>
+                
+                        <div class="footer-sub-itens">
+                            <a href="#">
+                                <h5>Fale Conosco</h5>
+                            </a>
+                            <a href="#">
+                                <h5>Frete e Entrega</h5>
+                            </a>
+                            <a href="#">
+                                <h5>Troca e Devoluções</h5>
+                            </a>
+                            <a href="#">
+                                <h5>Formas de Pagamento</h5>
+                            </a>
+                            <a href="#">
+                                <h5>FAQ</h5>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu-subs">
+                        <h4 class="footer-sub-toggle">
+                            Atendimento
+                            <i class="fa-solid fa-chevron-down seta"></i>
+                        </h4>
+                
+                        <div class="footer-sub-itens">
+                            <a href="#">
+                                <h5><span>Telefone:</span> (00) 1234-5678</h5>
+                            </a>
+                            <a href="#">
+                                <h5><span>E-mail:</span> exemplo@exemplo.com.br</h5>
+                            </a>
+                            
+                            <p><span>Horário de atendimento:</span></p>
+                            <p>
+                                Segunda a Sábado: 07h00 às 23h00 <br>
+                                Domingos e Feriados:  07h00 às 21h00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-up-pay">
+                    <img src="assets/img/icon/payments 1.png" alt="" class="pay-1">
+                    <img src="assets/img/icon/payments 2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- footer-down -->
+        <div class="footer-content2">
+            <div class="footer-down container">
+                <div class="footer-down-text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </div>
+
+                <div class="footer-down-partners">
+                    <img src="assets/img/icon/partners.png" alt="logo parceiros">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section>
+
+    </section>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS RESPONSÁVEL PELO DROPDOWN FOTTER MOBILE -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggles = document.querySelectorAll(".footer-sub-toggle");
+
+            toggles.forEach(toggle => {
+                toggle.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const parent = toggle.closest(".footer-menu-subs");
+                    parent.classList.toggle("ativo");
+                });
+            });
+        });
+
+        // AOS install
+        AOS.init();
+    </script>
+</body>
+
+</html>
