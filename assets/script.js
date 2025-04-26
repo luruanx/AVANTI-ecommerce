@@ -1,4 +1,4 @@
-// JS RESPONSÁVEL PELO CONTROLE DO NAV MENU ---------------------
+// JS RESPONSIBLE FOR CONTROLLING THE NAV MENU ---------------------
 
 const categoriasData = [
   [["Cat 1.1", "#"], ["Cat 1.2", "#"], ["Cat 1.3", "#"],
@@ -81,7 +81,7 @@ function mostrarCategorias(index, targetContent) {
   }
 }
 
-// atualiza as categorias pegando do array
+// update categories fetching from array
 departamentos.forEach(dep => {
   dep.addEventListener("mouseenter", () => {
     const index = dep.getAttribute("data-dept");
@@ -91,14 +91,14 @@ departamentos.forEach(dep => {
   });
 });
 
-// coloca a opção 1 como visivel ao abrir menu-option1
+// sets option 1 as visible when opening menu-option1
 menuTrigger.addEventListener("mouseenter", () => {
   mostrarCategorias(0, categoriasContent);
   categoriasBox.style.display = "flex";
   catBannerLateral.style.display = "block";
 });
 
-// exibi as categorias do menuitem-dep
+// display categories from menuitem-dep
 document.querySelectorAll(".menuitem-dep").forEach(dep => {
   dep.addEventListener("mouseenter", () => {
     const index = dep.getAttribute("data-dept");
@@ -110,13 +110,12 @@ document.querySelectorAll(".menuitem-dep").forEach(dep => {
   });
 });
 
-// adiciona o titulo das categorias
+// add category title
 menuitems.forEach(item => {
   item.addEventListener("mouseenter", () => {
     const index = item.getAttribute("data-dept");
     mostrarCategorias(index, menuitemContent);
 
-    // atualiza o título com o texto do link
     const titulo = item.querySelector("a")?.textContent || "";
     menuitemTitle.textContent = titulo;
 
@@ -124,7 +123,7 @@ menuitems.forEach(item => {
   });
 });
 
-// fecha o bloco quando sai da área
+// closes the block when leaving the area
 document.addEventListener("mousemove", (e) => {
   const dentroDoMenu = e.target.closest(".menuitem-box, .menuitem-dep");
   if (!dentroDoMenu) {
@@ -135,7 +134,7 @@ document.addEventListener("mousemove", (e) => {
 
 
 
-// JS RESPONSÁVEL PELO MENU MOBILE ------------------------
+// JS RESPONSIBLE FOR MENU MOBILE ------------------------
 const mobileToggle = document.getElementById("mobileToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileOverlay = document.getElementById("mobileOverlay");
@@ -229,7 +228,7 @@ window.addEventListener("resize", () => {
 });
 
 
-// JS RESPONSÁVEL PELO CARROSEL DOS PRODUTOS -------------------------
+// JS RESPONSIBLE FOR CAROUSEL THE PRODUCTS -------------------------
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -237,10 +236,10 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -270,7 +269,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-// JS RESPONSÁVEL PELO INPUT DE BUSCA -------------------------
+// JS RESPONSIBLE FOR INPUT THE SEARCH -------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("searchInput");
   const btn = document.getElementById("searchBtn");
@@ -325,7 +324,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Fechar ao clicar fora
+  // close on click outside
   document.addEventListener("click", (e) => {
     if (!wrapper.contains(e.target)) {
       popup.style.display = "none";
