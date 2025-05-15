@@ -1,7 +1,7 @@
 
 <h1 align="center">
 <picture>
-  <img width="400" alt="logo awax" src="assets/img/LogoAvanti.png">
+  <img width="400" alt="logo Avanti" src="assets/img/LogoAvanti.png">
 </picture>
     <p>E-commerce AVANTI</p>
 </h1>
@@ -36,7 +36,6 @@ No campo de busca, ao clicar no botão da lupa, o texto digitado no campo deve s
   <img align="center" alt="logo-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="logo-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="logo-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-  <img align="center" alt="logo-SWIPER" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/swiper/swiper-original.svg">
   <img align="center" alt="logo-FIGMA" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg">
   <img align="center" alt="logo-PS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg">
 </div>
