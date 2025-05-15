@@ -1,7 +1,7 @@
 
 <h1 align="center">
 <picture>
-  <img width="400" alt="logo Avanti" src="assets/img/LogoAvanti.png">
+  <img alt="logo Avanti" src="assets/img/LogoAvanti.png">
 </picture>
     <p>E-commerce AVANTI</p>
 </h1>
